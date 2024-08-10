@@ -1,0 +1,32 @@
+<!-- directivas for  -->
+
+<h1>listado de empleados  </h1>
+
+
+  <ul class="table-auto m-4">
+
+<!-- funcionamiento del ng for esto puede imprimir de forma mas corecta nuestros arrays en la
+ etiquetas html -->
+
+    <thead>
+      <th>empleados</th>
+    </thead>
+    <li *ngFor="let name of empleadosname">{{name}}</li>
+  </ul>
+<!-- creacion del bottones de eliminacion de items de la tabla -->
+<ng-template #pollo>
+  <h2 class="m-2 p-2">no ha eliminado nada</h2>
+</ng-template>
+<div>
+  <h2 class="m-2 p-2" *ngIf="delempleado ; else pollo " >personal borrado:<small class="text-red-700 m-2">{{ delempleado }}</small></h2>
+</div>
+
+<!-- este boton nos puede decir si se a borrado con exitosamente este items de la tabla -->
+
+
+<button *ngIf="empleadosname.length > 0" class="border-2 border-gray-600 rounded-md p-2 bg-red-600 text-white hover:bg-white text-black " (click)="elemianritems()">eliminar ultimo items </button>
+
+
+<!-- implementado el ng-if- ng-else - ng-temple -->
+<!-- el ng temple es un div que no existe -->
+<!-- detro del ng temple en la opcion del numeral podemos adjuntarle la variable para que desaparezca -->

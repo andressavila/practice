@@ -1,0 +1,21 @@
+<h1 class="text-center m-3 font-bold ">personajes de dbz</h1>
+<ul class=" list-disc list-inside m-3">
+  <li *ngFor="let name of personlist; let i = index;
+  let isfirst = first ; let islast = last ; let isEven = even ">
+
+    <!-- para poder saber la posicion del array en el ciclo for nesecitamos
+     teener la estructura ngFor="let name of personlist; let i = index" -->
+    <span class="text-red-600">{{i+1}}</span>
+
+    <!-- <span class="text-green-500"> este el primero : {{isfirst}}</span>
+    <span class="text-green-500"> este el ultimo : {{islast}}</span> -->
+    {{ name.name }} -{{ name.power}}</li>
+
+<!-- el argumento first n os resuelve la condicion del primero -->
+<!-- el argumento last nos resuelve la condicion del utimo -->
+ <!-- el argumento even nos resuelve la condicion si es par  -->
+  <!-- el argumento odd n os resuelve la condicion si es impar -->
+
+  <!-- <li>vegeta</li>
+  <li>piccolo</li> -->
+</ul>

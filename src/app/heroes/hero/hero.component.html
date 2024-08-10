@@ -1,0 +1,36 @@
+<h1 class="text-3xl flex justify-center">{{titulo}}</h1>
+
+<div class="m-3 bg-slate-200 rounded-md">
+<dl class="m-2 grid grid-cols-2">
+  <td>nombre : </td>
+  <dd>{{nombrename}}</dd>
+
+
+   <td>apllido : </td>
+   <dd>{{lasname}}</dd>
+
+   <td>cargo : </td>
+    <dd>{{cargo}}</dd>
+    <td>metodo  de descipcion: </td>
+    <dd>{{ getnamedescripcion() }}</dd>
+
+
+
+    <td>jege de area </td>
+    <dd>{{jefe}}</dd>
+
+</dl>.
+
+
+<!-- destruir un componente  *ngif = "evaluamos las espresiones"-->
+<!-- este simbolo es para decir que es diferente : !== -->
+
+<button (click)="cambiararea()" *ngIf="cargo!=='pastarna' "
+  class="border-2 border-gray-600 rounded-full p-1 mx-2"> cambiar cargo </button>
+
+<button (click)="cambiarjefe()" *ngIf="jefe !=='lopes caceres'"
+class="border-2 border-gray-600 rounded-full p-1 my-2"> cambiar jefe de area</button>
+</div>
+
+<!-- la directiva if nos permite tener una condicional estructuras
+ destruccion de los bottones o componentes -->
